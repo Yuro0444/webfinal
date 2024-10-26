@@ -1,0 +1,607 @@
+
+#desc{
+    font-size: 1vw;
+    color: #006125;
+}
+
+
+.about-container, .projects-container {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Space between items, with the image on the far right */
+    align-items: center; /* Center items vertically */
+   
+}
+
+
+.about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;        /* Set the width to 100% of its container */
+      /* Maintain the same maximum width */
+    height: auto;       /* Maintain the aspect ratio of the image */
+}
+
+.about-text, .projects-text{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 7%;
+
+}
+
+.about-text h3, .projects-text h3{
+    color: #006125;
+    font-weight: 900;
+    font-size: 20vh;
+}
+
+.about-text h1{
+    font-size: 1.7vw;
+}
+
+.about-text p{
+    font-size: 1.3vw;
+    font-weight: lighter;
+}
+
+.learn-more-button {
+    background-color: #006125; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 1vw 2vw; /* Padding for the button */
+    border-radius: 7px; /* Rounded corners */
+    font-size: 1vw; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 1.5vw; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.learn-more-button:hover {
+    background-color: #3c7a3c; /* Darker shade on hover */
+}
+
+.counters {
+    width: auto;
+    height: auto;
+    background-color: #00491c;
+    background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0,73,28,0.8));
+    padding: 1.5em 3em;
+    color: #fff;
+    text-align: center;
+}
+
+.counters > div {
+    width: 100%; /* Full width for better responsiveness */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 4em 3em; /* Space between items */
+}
+
+.counter {
+    position: relative;
+}
+
+.counter h1 {
+    font-size: 2vw; /* Default font size for larger screens */
+    margin-bottom: 0.5em;
+}
+
+.counter h3 {
+    font-size: 1vw; /* Default font size for larger screens */
+}
+
+.counter:not(:last-child)::before {
+    content: '';
+    background: #fff;
+    position: absolute;
+    width: 0.1vw;
+    height: 3vh;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.5em;
+}
+
+
+.contact-banner {
+    height: 25vh;
+    background-color: #00491c;
+    background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0, 73, 28, 0.8));
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: space-between; /* Space between text and button */
+    padding: 0 5%; /* Add some horizontal padding */
+    color: white; /* Set text color to white */
+    padding-right: 15%;
+   
+}
+
+.contact-banner h1 {
+    font-size: 2vw; /* Increase font size */
+    margin: 0; /* Remove default margin */
+    padding-left: 15%;
+}
+
+.contact-button {
+    background-color: #ffffff; /* Button background color */
+    color: rgb(0, 0, 0); /* Text color */
+    padding: 1vw 2vw; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5%; /* Rounded corners */
+    font-size: 1vw; /* Font size */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.contact-button:hover {
+    background-color: #268a4c; /* Darker color on hover */
+}
+
+.projects-container{
+    background-color: #ffffff;
+}
+
+.cleaning{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;        
+    height: auto;      
+}
+
+.projects-text h1{
+    font-size: 1.8vw;
+}
+
+.projects-text p{
+    font-size: 1.3vw;
+}
+
+
+
+.picture{
+    width: 30%;
+}
+
+.join-donate {
+    width: auto;
+    height: auto;
+    background-color: #F8F8F8;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: relative; /* Ensure child elements can be positioned relative to this container */
+}
+
+
+
+.join-donate-content {
+    position: absolute;
+    top: 50%; /* Center the content vertically */
+    left: 50%; /* Center the content horizontally */
+    transform: translate(-50%, -50%); /* Translate to perfectly center */
+    color: #006125; /* Text color */
+    text-align: center;
+}
+
+
+
+.join-donate h1 {
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 30px; /* Add some space between the text and the buttons */
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2vw; /* Space between the buttons */
+}
+
+.join-button, .donate-button {
+    background-color: #006125;
+    color: white;
+    border: none;
+    padding: 1vw 2vw;
+    border-radius: 7px;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover, .donate-button:hover {
+    background-color: #3c7a3c;    
+}
+
+.mountain{
+    filter: brightness(0.5);
+    width: 70%;
+    height: auto;
+    max-height: 50vh;
+    border-radius: 20px;
+}
+
+
+.faq{
+    padding: 7%;
+    background-color: #ffffff;
+    display: flex;
+    width: auto;
+    height: auto;
+    /* border: solid red 2px; */
+}
+
+.faq-leaves{
+    display: block;
+    border-radius: 7px;
+    width: 45%;
+    max-height: 85vh;
+    /* border: solid red 2px; */
+}
+
+.faq-text{
+    margin-left: 5%;
+    height: auto;
+    width: 50%;
+    /* border: solid red 2px; */
+}
+
+.faq-text h1{
+    font-size: 2.5vw;
+}
+
+.faq-text h2{
+    font-size: 1.2vw;
+    padding-top: 10%;
+}
+
+
+
+.faq-text hr{
+    background-color: #00000023;
+    opacity: 0.3;
+}
+
+.faq-text h2 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    
+}
+
+.faq-text h2::after {
+    content: '⌄'; /* Downward arrow */
+    position: absolute;
+    right: 0; /* Place the arrow to the right of the text */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; /* Animation for rotation */
+}
+
+.faq-text h2.active {
+    color: #006125; /* Change to any color you prefer */
+}
+
+.faq-text h2.active::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow upwards */
+    content: '⌃'; /* Upward arrow */
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 1vw;
+}
+
+.panel.open {
+    max-height: 150px; /* Adjust this value depending on content size */
+}
+
+
+
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .learn-more-button {
+        font-size: 1.5vw;
+    }
+
+    #desc{
+        font-size: 1.5vw;
+        color: #006125;
+    }
+    
+    .about-text h1{
+        font-size: 2.2vw;
+       
+    }
+
+    .about-text p{
+        font-size: 1.9vw;
+        font-weight: lighter;
+    }
+
+    .about-container{
+ 
+        margin-top: 10%;
+    }
+
+    .mountain{
+        max-height: 20vh;
+    }    
+
+    .projects-text h1{
+        font-size: 2.2vw;
+    }
+    
+    .projects-text p{
+        font-size: 1.9vw;
+    }
+    
+    .contact-button {
+        font-size: 1.5vw; /* Font size */
+    }
+
+    .join-donate h1 {
+        font-size: 3.5vw;
+    }
+ 
+    .faq-text h1{
+        font-size: 2.5vw;
+    }
+
+    .faq-text h2{
+        font-size: 2vw;
+        padding-top: 10%;
+    }
+    
+    .panel {
+        font-size: 1.5vw;
+    }
+
+    .panel.open {
+        max-height: 150px; /* Adjust this value depending on content size */
+    }
+    
+    .contact-banner {
+        max-height: 10vh;
+    }
+    
+    .contact-banner h1 {
+        font-size: 2.5vw; /* Increase font size */
+    }
+
+    .join-button, .donate-button {
+        font-size: 2vw;
+    }
+}
+
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1440px) {
+
+    #desc{
+        font-size: 1.5vw;
+        color: #006125;
+
+    }
+    
+    .mountain{
+        max-height: 30vh;
+    }    
+    
+    .about-text p{
+        font-size: 1.7vw;
+        font-weight: lighter;
+    }
+
+    .projects-text p{
+        font-size: 1.7vw;
+        padding-top: 5%;
+    }
+
+    .contact-banner {
+        max-height: 15vh;
+    }
+
+    .faq-text h1{
+        font-size: 2.5vw;
+    }
+
+    .faq-text h2{
+        font-size: 1.6vw;
+        padding-top: 10%;
+    }
+    
+    .panel {
+        font-size: 1.6vw;
+    }
+
+    .contact-button {
+        font-size: 1.5vw; /* Font size */
+    }
+
+    .join-button, .donate-button {
+        font-size: 1.8vw;
+    }
+
+    .learn-more-button {
+        font-size: 1.5vw; /* Font size */
+    }
+}
+
+
+/* Phone margin to fit with the new navbar */
+@media (max-width: 425px) {
+
+
+    #desc{
+        font-size: 2.5vw;
+        text-align: center;
+
+    }
+
+    .about-container{
+        padding: 10%;
+    }
+
+    .about-text h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .about-text p{
+        font-size: 4vw;
+        font-weight: lighter;
+        text-align: center;
+    }
+    
+    .learn-more-button {
+        font-size: 4vw; /* Font size */
+        display: block; /* Ensure the button is block-level for centering */
+        margin-left: auto;
+        margin-right: auto; /* Center the button */
+    }
+
+    .about{
+        width: 100%;
+        display: none;
+    }
+
+    .cleaning{
+        width: 100%;
+        display: none;
+    }
+    
+    .projects-text h1{
+        font-size: 4.8vw;
+        text-align: center;
+    }
+
+    .projects-text p{
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .projects-container{
+        padding: 10%;
+    }
+
+    .mountain{
+        height: 15vh;
+    }
+
+    .about-container, .projects-container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .faq {
+        flex-direction: column; /* Stack FAQ elements vertically */
+        padding: 5%; /* Adjust padding */
+    }
+
+    
+    .faq-text {
+        width: 100%; /* Full width on mobile */
+        margin: 0; /* Remove margin for better fit */
+        
+    }
+
+    
+    .faq-text h2 {
+        font-size: 3.5vw; /* Adjust heading sizes for mobile */
+        text-align: center; /* Center text */
+        font-weight: bold;
+    }
+
+    .faq-text h2 {
+        padding-top: 5%; /* Add space on top */
+    }
+
+    .faq-text h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .faq-leaves{
+        display: none;
+    }
+
+    .panel {
+        text-align: center;
+        font-size: 3vw;
+    }
+
+
+    .counter h1 {
+        font-size: 5vw; /* Default font size for larger screens */
+        margin-bottom: 0.5em;
+    }
+    
+    .counter h3 {
+        font-size: 3vw; /* Default font size for larger screens */
+    }
+    
+
+    .counters {
+        width: auto;
+        height: auto;
+        background-color: #00491c;
+        background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0,73,28,0.8));
+        padding: 1.5em 3em;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .counters > div {
+        width: 100%; 
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 2em 1.5em; 
+    }  
+
+    .counter:not(:last-child)::before {
+        display: none;
+    }
+    
+    .contact-banner {
+        max-height:  15vh;
+    }
+    
+    .contact-banner h1 {
+        font-size: 3.5vw; /* Increase font size */
+    }
+
+    .contact-button {
+        font-size: 2.5vw; /* Font size */
+        text-align: center;
+    }
+
+    .join-donate {
+        width: auto;
+        height: auto;
+        background-color: #F8F8F8;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: relative; /* Ensure child elements can be positioned relative to this container */
+    } 
+    
+    .join-donate h1 {
+        font-size: 4vw;
+        font-weight: 700;
+        margin-bottom: 30px; /* Add some space between the text and the buttons */
+        color: white;
+    }
+    
+    .join-button, .donate-button {
+        font-size: 3vw;
+     
+    }
+}

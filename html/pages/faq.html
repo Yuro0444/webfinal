@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Wise</title>
+    <link rel="stylesheet" href="../../css/pages/faq.css">
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <link rel="stylesheet" href="../../css/pages/about.css">
+    <link rel="stylesheet" href="../../css/dark.css">
+
+    <link rel="icon" href="../../assets/photos/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title" id="logo-container">
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    &#9776;
+                </button>
+                <img src="../../assets/photos/logo.png" alt="Logo" class="logo">
+                <h1 class="site-title">EARTH<br>WISE</h1>
+            </div>
+            
+            <nav id="navbar">
+                <div id="navbar-left">
+                    <a href="../../html/index.html">Home</a>
+                    <a href="../../html/pages/about.html">About</a>
+                    <a href="../../html/pages/projects.html">Projects</a>
+                    <a href="../../html/pages/faq.html">FAQ</a>
+                    <a href="../../html/pages/contact-us.html">Contact Us</a> 
+                </div>
+                <div id="navbar-right">
+                    <a href="#" id="dark-mode-toggle">Dark Mode</a>
+                    <a href="../../html/pages/donate.html" id="donate">Donate</a>
+                    <a href="../../html/pages/join.html" id="join">Join</a>
+                </div>     
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.header-container').classList.toggle('navbar-open');
+        });
+    </script>
+    
+
+    <script>
+        function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            document.getElementById('dark-mode-toggle').innerText = 'Light Mode'; // Change text to Light Mode
+        }
+    
+        function disableDarkMode() {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; // Change text to Dark Mode
+        }
+    
+        function detectColorScheme() {
+            let theme = 'light';
+    
+            if (localStorage.getItem('theme')) {
+                theme = localStorage.getItem('theme');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                theme = 'dark';
+            }
+    
+            theme === 'dark' ? enableDarkMode() : disableDarkMode();
+        }
+    
+        detectColorScheme();
+    
+        document.getElementById('dark-mode-toggle').addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+            if (localStorage.getItem('theme') === 'light') {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+    </script>
+
+    <div class="space"></div>
+
+    <div class="faq">
+        <div class="faq-text">
+            <h1>Frequently Asked Questions</h1>
+            
+            <div class="accordion">
+                <h2>What is the purpose of this website?</h2>
+                <p class="panel">The purpose of this website is to raise awareness about environmental issues, provide educational resources, and encourage community involvement in sustainable projects.</p>
+                <hr>
+                
+                <h2>How can I get involved with your projects?</h2>
+                <p class="panel">You can join our projects by visiting the "Join Us" page and signing up to volunteer or participate in any ongoing or upcoming initiatives.</p>
+                <hr>
+                
+                <h2>How can I make a donation?</h2>
+                <p class="panel">Donations can be made through our "Donate" page, where you can choose to support a specific project or contribute to general funds.</p>
+                <hr>
+                
+                <h2>How can I stay updated on your latest news and events?</h2>
+                <p class="panel">You can stay updated by subscribing to our newsletter or following us on our social media platforms.</p>
+                <hr>
+                
+                <h2>What types of projects do you do?</h2>
+                <p class="panel">We focus on a variety of environmental projects, including ecosystem restoration, sustainability initiatives, and conservation efforts.</p>
+                <hr>
+            </div>
+        </div>
+        
+        <!-- Duplicate Accordion on the Right Side -->
+        <div class="faq-text">        
+            <div class="accordion" id="more-faq">
+                <h2>Is EarthWise a registered nonprofit organization?</h2>
+                <p class="panel">Yes, EarthWise is a registered nonprofit, and all donations go directly toward funding our environmental projects and conservation efforts.</p>
+                <hr>
+                
+                <h2>How does EarthWise fund its projects?</h2>
+                <p class="panel">We rely on donations from individuals, corporate sponsorships, grants, and partnerships to fund our initiatives. </p>
+                <hr>
+                
+                <h2>What impact has EarthWise made so far?</h2>
+                <p class="panel">Since our founding, we’ve contributed to reforestation efforts, conservation of endangered species, pollution clean-ups, and numerous educational programs. </p>
+                <hr>
+                
+                <h2>How does EarthWise work with local communities?</h2>
+                <p class="panel">EarthWise offers workshops, online resources, webinars, and events to raise awareness about sustainability practices.</p>
+                <hr>
+                
+                <h2>How can businesses support EarthWise?</h2>
+                <p class="panel">Businesses can partner with us through sponsorships, corporate donations, or employee volunteer programs. </p>
+                <hr>
+
+                <h2>What are EarthWise’s future goals?</h2>
+                <p class="panel">Our goals include expanding our conservation areas, launching new reforestation projects, and growing our educational outreach.</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.accordion h2').forEach(question => {
+            question.addEventListener('click', () => {
+                // Toggle the active state for the question
+                question.classList.toggle('active');
+                
+                // Toggle the panel visibility
+                const panel = question.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+    <div class="footer">
+        <div>
+            <p><br>“We dedicate our efforts to environmental<br> conservation, promoting sustainability, and<br> protecting the natural world for future<br> generations."</p>
+            <p><br>Copyright © 2024. Euan Roie Nicolas </p>
+        </div>
+        <div class="contact">
+            <p>Phone</p>
+            <p>+123 456 7890</p>
+            <p><br>Office</p>
+            <p>3828 Piermont Drive NE, Albuquerque, NM 87109</p>
+            <p><br>Email</p>
+            <p>EarthWise@Gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>

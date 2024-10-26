@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Wise</title>
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <link rel="stylesheet" href="../../css/pages/about.css">
+    <link rel="stylesheet" href="../../css/dark.css">
+    <link rel="stylesheet" href="../../css/pages/donate.css">
+    <link rel="icon" href="../../assets/photos/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title" id="logo-container">
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    &#9776;
+                </button>
+                <img src="../../assets/photos/logo.png" alt="Logo" class="logo">
+                <h1 class="site-title">EARTH<br>WISE</h1>
+            </div>
+            
+            <nav id="navbar">
+                <div id="navbar-left">
+                    <a href="../../html/index.html">Home</a>
+                    <a href="../../html/pages/about.html">About</a>
+                    <a href="../../html/pages/projects.html">Projects</a>
+                    <a href="../../html/pages/faq.html">FAQ</a>
+                    <a href="../../html/pages/contact-us.html">Contact Us</a> 
+                </div>
+                <div id="navbar-right">
+                    <a href="#" id="dark-mode-toggle">Dark Mode</a>
+                    <a href="../../html/pages/donate.html" id="donate">Donate</a>
+                    <a href="../../html/pages/join.html" id="join">Join</a>
+                </div>     
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.header-container').classList.toggle('navbar-open');
+        });
+    </script>
+
+    <script>
+        function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            document.getElementById('dark-mode-toggle').innerText = 'Light Mode'; // Change text to Light Mode
+        }
+    
+        function disableDarkMode() {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; // Change text to Dark Mode
+        }
+    
+        function detectColorScheme() {
+            let theme = 'light';
+    
+            if (localStorage.getItem('theme')) {
+                theme = localStorage.getItem('theme');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                theme = 'dark';
+            }
+    
+            theme === 'dark' ? enableDarkMode() : disableDarkMode();
+        }
+    
+        detectColorScheme();
+    
+        document.getElementById('dark-mode-toggle').addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+            if (localStorage.getItem('theme') === 'light') {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+    </script>
+
+
+<div class="space"></div>
+
+    <div class="about-container">
+        <div class="about-text-about">
+            <div class="main-text">
+                <h1>Donate for a Better Cause!</h1>
+            </div>
+            <div class ="paragraph">
+                <p>Your donations help us achieve our goals for a healthier environment, enabling us to take on impactful projects and support sustainable initiatives. 
+                    With your support, we can create meaningful change, protect natural resources, and build a greener future for generations to come. Together, we’re 
+                    making a lasting difference.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="donation-form-container">
+
+        <form id="donation-form" action="donate-thank-you.html" method="POST">
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required placeholder="Enter amount (e.g., 50)">
+
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+            <label for="message">Message (optional):</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message here..."></textarea>
+    
+            <div class="button-container">
+                <button type="submit">Donate</button>
+                <button type="reset" class="reset-button">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div>
+            <p><br>“We dedicate our efforts to environmental<br> conservation, promoting sustainability, and<br> protecting the natural world for future<br> generations."</p>
+            <p><br>Copyright © 2024. Euan Roie Nicolas </p>
+        </div>
+        <div class="contact">
+            <p>Phone</p>
+            <p>+123 456 7890</p>
+            <p><br>Office</p>
+            <p>3828 Piermont Drive NE, Albuquerque, NM 87109</p>
+            <p><br>Email</p>
+            <p>EarthWise@Gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>

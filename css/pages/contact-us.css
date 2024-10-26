@@ -1,0 +1,117 @@
+
+.about-container {
+    margin-top: 4%;
+
+}
+
+.content{
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 13%;
+}
+
+.content-text{
+    margin-top: 40%;
+    margin-left: 50px;
+    display: flex;
+}
+
+.about-text h1 {
+    font-size: 5vw;
+}
+
+.about-text{
+    height: 25vh;
+    
+}
+
+
+
+.content-gratitude h1{
+    font-size: 2.2vw;
+}
+
+.content-gratitude p{
+    font-size: 1.5vw;
+}
+
+.content-contact{
+    margin-left: 15%; 
+}
+
+.content-contact h1{
+    font-size: 2vw;
+}
+
+.content-contact p{
+    font-size: 1.3vw;
+}
+
+@media (max-width: 768px) {
+    .about-text h1 {
+        font-size: 7vw;
+    }
+    
+    .about-text{
+        height: 35vh;
+        
+    }
+    
+    .content-gratitude h1{
+        font-size: 3.5vw;
+    }
+    
+    .content-gratitude p{
+        font-size: 2.5vw;
+    }
+    
+   
+    
+    .content-contact h1{
+        font-size: 3.2vw;
+    }
+    
+    .content-contact p{
+        font-size: 2.2vw;
+        
+    }
+    
+}
+
+
+@media (max-width: 425px) {
+    
+    .about-text h1 {
+        font-size: 7vw;
+    }
+    
+    .about-text{
+        height: 35vh;
+        
+    }
+    
+    .content-gratitude h1{
+        font-size: 3.5vw;
+    }
+    
+    .content-gratitude p{
+        font-size: 2.5vw;
+    }
+    
+    .content-contact{
+        margin-left: 5%; 
+        margin-right: 7%;
+    }
+    
+    .content-contact h1{
+        font-size: 3.5vw;
+    }
+    
+    .content-contact p{
+        font-size: 2.5vw;
+        
+    }
+    
+
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Wise</title>
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <link rel="stylesheet" href="../../css/pages/project-1.css">
+    <link rel="stylesheet" href="../../css/dark.css">
+    <link rel="icon" href="../../assets/photos/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title" id="logo-container">
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    &#9776;
+                </button>
+                <img src="../../assets/photos/logo.png" alt="Logo" class="logo">
+                <h1 class="site-title">EARTH<br>WISE</h1>
+            </div>
+            
+            <nav id="navbar">
+                <div id="navbar-left">
+                    <a href="../../html/index.html">Home</a>
+                    <a href="../../html/pages/about.html">About</a>
+                    <a href="../../html/pages/projects.html">Projects</a>
+                    <a href="../../html/pages/faq.html">FAQ</a>
+                    <a href="../../html/pages/contact-us.html">Contact Us</a> 
+                </div>
+                <div id="navbar-right">
+                    <a href="#" id="dark-mode-toggle">Dark Mode</a>
+                    <a href="../../html/pages/donate.html" id="donate">Donate</a>
+                    <a href="../../html/pages/join.html" id="join">Join</a>
+                </div>     
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.header-container').classList.toggle('navbar-open');
+        });
+    </script>
+    
+    
+    <script>
+        function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            document.getElementById('dark-mode-toggle').innerText = 'Light Mode'; // Change text to Light Mode
+        }
+    
+        function disableDarkMode() {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; // Change text to Dark Mode
+        }
+    
+        function detectColorScheme() {
+            let theme = 'light';
+    
+            if (localStorage.getItem('theme')) {
+                theme = localStorage.getItem('theme');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                theme = 'dark';
+            }
+    
+            theme === 'dark' ? enableDarkMode() : disableDarkMode();
+        }
+    
+        detectColorScheme();
+    
+        document.getElementById('dark-mode-toggle').addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+            if (localStorage.getItem('theme') === 'light') {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+    </script>
+    
+
+        <div class="space"></div>
+
+        <div class="about-container" id = "top">
+            <div class="about-text-project">
+                <div class="main-text">
+                    <h1>Featured Projects</h1>
+                </div>
+                <div class ="paragraph">
+                    <p>Our projects are dedicated to creating a meaningful, sustainable impact on the environment. By bringing together communities, utilizing innovative technology, 
+                        and fostering sustainable practices, we aim to not only restore and preserve natural ecosystems but also inspire a collective movement toward a greener future. </p>
+                    <p>
+                        <br>These projects are designed not only to make an immediate difference but to leave a lasting positive impact, helping both current and future generations 
+                        benefit from a healthier planet. Below are some of the projects we take pride in.</p>
+      
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="about-container">
+            <div class="about-text-project">
+                <div class="main-text">
+                    <h1>Green Energy Campaign</h1>
+                </div>
+                <div class ="paragraph">
+                    <p>Our Green Energy Campaign is a dynamic initiative focused on promoting the adoption of renewable energy sources and fostering a sustainable energy future. 
+                        This campaign aims to raise awareness about the environmental and economic benefits of green energy, such as solar, wind, and hydro power, and to encourage 
+                        individuals, businesses, and communities to make the transition away from fossil fuels. Through a series of educational workshops, informational webinars, 
+                        and community outreach events, we provide valuable insights into the advantages of renewable energy, including reduced greenhouse gas emissions, lower energy 
+                        costs, and enhanced energy security.</p>
+                    <p>
+                        <br>In addition to raising awareness, our campaign actively supports the implementation of green energy solutions by offering resources and incentives for those 
+                        interested in making the switch. We collaborate with local governments, energy providers, and technology experts to facilitate access to renewable energy 
+                        options and to help navigate the process of installation and integration. By showcasing successful case studies and providing practical guidance, our Green 
+                        Energy Campaign aims to inspire and empower individuals and organizations to take meaningful steps towards a cleaner, more sustainable energy landscape. 
+                        Through collective effort and commitment, we strive to drive the transition to green energy and contribute to a healthier planet for future generations.</p>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="../../assets/photos/energy.png" class="energy">
+            </div> 
+        </div>
+
+        <div class="about-container">
+            <div class="about-text-project">
+                <div class="main-text">
+                    <h1>Beach Cleanup Drive</h1>
+                </div>
+                <div class ="paragraph">
+                    <p>Our Beach Cleanup Drive is an ambitious project dedicated to combating the persistent problem of marine pollution and enhancing the health of our coastal environments. 
+                        This initiative involves organizing regular beach cleanup events where community members, environmental enthusiasts, and local organizations come together to address the 
+                        mounting issue of litter on our shores. Each cleanup event is meticulously planned to ensure efficiency and maximize impact. Volunteers are provided with necessary tools 
+                        such as gloves, trash bags, and collection bins, and are guided by trained coordinators who oversee the sorting and proper disposal of collected waste.</p>
+                    <p>
+                        <br>The scope of our Beach Cleanup Drive extends beyond the immediate task of removing litter. We aim to tackle the root causes of beach pollution through a combination 
+                        of educational workshops and public awareness campaigns. These sessions are designed to inform participants about the various types of waste commonly found on beaches, 
+                        including plastics, microplastics, and hazardous materials, and their detrimental effects on marine ecosystems. By emphasizing the importance of reducing single-use plastics, 
+                        recycling, and responsible waste disposal, we hope to instill a sense of accountability and proactive behavior in the community.</p>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="../../assets/photos/beach.png" class="energy">
+            </div> 
+        </div>
+
+        <div class="about-container">
+            <div class="about-text-project">
+                <div class="main-text">
+                    <h1>Tree Plantation</h1>
+                </div>
+                <div class ="paragraph">
+                    <p>Our Tree Plantation Project is a vital initiative aimed at restoring and enhancing green spaces while combating deforestation and climate change. This project focuses on planting 
+                        native trees in deforested and degraded areas to rebuild natural habitats, improve air quality, and contribute to the overall health of our environment. Through carefully planned 
+                        planting events, we engage community members, local schools, and environmental organizations in hands-on activities that not only contribute to reforestation but also foster a 
+                        deeper connection with nature.</p>
+                    <p>
+                        <br>Each tree planting session is designed to be educational and impactful. Volunteers receive training on proper planting techniques, the benefits of various tree species, 
+                        and the importance of maintaining newly planted trees. In addition to the immediate environmental benefits, such as increased biodiversity and enhanced carbon sequestration, 
+                        the project also aims to raise awareness about the critical role trees play in sustaining ecosystems. By creating more green spaces and encouraging community involvement, our 
+                        Tree Plantation Project seeks to build a legacy of environmental stewardship and inspire collective action towards a greener, more sustainable future.</p>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="../../assets/photos/plantation.png" class="energy">
+            </div> 
+        </div>
+
+    </body>
+    <div class="footer">
+        <div>
+            <p><br>“We dedicate our efforts to environmental<br> conservation, promoting sustainability, and<br> protecting the natural world for future<br> generations."</p>
+            <p><br>Copyright © 2024. Euan Roie Nicolas </p>
+        </div>
+        <div class="contact">
+            <p>Phone</p>
+            <p>+123 456 7890</p>
+            <p><br>Office</p>
+            <p>3828 Piermont Drive NE, Albuquerque, NM 87109</p>
+            <p><br>Email</p>
+            <p>EarthWise@Gmail.com</p>
+        </div>
+    </div>
+</html>

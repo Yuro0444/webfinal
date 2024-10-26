@@ -1,0 +1,392 @@
+/* Base styles (already present in your code) */
+
+* {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+
+.space {
+    height: 4vw;
+}
+
+body {
+    margin: 0;
+    background-color: #F8F8F8;
+    font-family: "Inria Sans", sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #ffffff; 
+    position: fixed;
+    top: 0; 
+    z-index: 1000; 
+    width: 100%;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+    height: auto;
+
+}
+
+#logo-container {
+    padding-left: 3%; 
+    display: flex;
+    align-items: center;
+    width: 20%; 
+    height: auto;
+    color: #ffffff;
+}
+
+.logo {
+    filter: brightness(0) invert(1);
+    width: 35%; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.logo-title {
+    background-color: #006125;
+    color: #ffffff;
+    width: auto;
+
+}
+
+.site-title {
+    font-size: 1vw; 
+}
+
+#navbar {
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+}
+
+#navbar-left, #navbar-right {
+    display: flex; 
+    margin-left: 5%; 
+}
+
+/* Remove underline and add transition effect for navbar links */
+#navbar-left a, #navbar-right a {
+    color: #242424;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    font-size: 1vw; 
+    line-height: 25px;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect: lighten color slightly */
+#navbar-left a:hover, #navbar-right a:hover {
+    color: #007c0e; /* Slightly lighter color on hover */
+}
+
+
+
+#navbar-right {
+    margin-left: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+    padding: 3%;
+
+}
+
+.contact{
+    padding-left: 20%;
+}
+
+
+/* Media Queries */
+
+/* Style for the hamburger menu */
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Default hidden, will be shown in media query */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #d1d1d1;
+    cursor: pointer;
+    z-index: 1100; /* Ensure the button stays above the menu */
+ 
+}
+
+/* Media Query for Mobile Devices */
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    #logo-container {
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 10%; /* Smaller logo */
+    }
+
+    #navbar-left, #navbar-right {
+        width: 100%;
+        justify-content:center; /* Space out items evenly */
+        padding: 0; /* Remove extra padding */
+    }
+
+    #navbar-left a, #navbar-right a {
+        font-size: 2vw; /* Increase font size for better readability */
+        padding: 2vw; /* Increase padding for touch targets */
+    }
+
+    #navbar-left a{
+        padding-right: 2%;
+    }
+
+    #navbar-left{
+        margin-left: 2%;
+    }
+
+    #navbar-right{
+        margin-right: -3%;
+    }
+
+    .site-title {
+        font-size: 2.2vw; 
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .footer {
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        color: white;
+        padding: 3%;
+    
+    }
+    
+    .contact{
+        padding-left: 20%;
+    }
+
+    
+}
+
+
+/* Laptop  */
+@media (min-width:  769px) and (max-width: 1440px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+    }
+
+    #navbar-right {
+        padding-right: 5%;
+    }
+
+    #logo-container {
+        width: 35%;
+    }
+
+    .logo {
+        width: 38%; /* Slightly larger logo for tablets */
+        margin-left: 7%;
+    }
+
+    .site-title {
+        font-size: 1.8vw; /* Larger font size */
+    }
+
+    #navbar-left a, #navbar-right a {
+        font-size: 1.3vw; /* Adjust font size */
+        padding: 1vw; /* Adjust padding */
+    }
+
+    .footer {
+        font-size: 1.2vw;
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        color: white;
+        padding: 3%;
+    }
+    
+    .contact{
+        padding-left: 20%;
+    }
+    
+}
+
+
+/* Laptop */
+@media (min-width:  769px) and (max-width: 1440px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+    }
+
+    #navbar-right {
+        padding-right: 5%;
+    }
+
+    #logo-container {
+        width: 35%;
+    }
+
+    .logo {
+        width: 38%; /* Slightly larger logo for tablets */
+        margin-left: 7%;
+    }
+
+    .site-title {
+        font-size: 1.8vw; /* Larger font size */
+    }
+
+    #navbar-left a, #navbar-right a {
+        font-size: 1.3vw; /* Adjust font size */
+        padding: 1vw; /* Adjust padding */
+    }
+
+    .footer {
+        font-size: 1.2vw;
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        color: white;
+        padding: 3%;
+    
+    }
+    
+    .contact{
+        padding-left: 20%;
+    }
+    
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1441px) {
+
+    #logo-container {
+        width: 30%;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    #navbar-left a, #navbar-right a {
+        font-size: 1vw; /* Standard size */
+        padding: 1.5vw; /* Standard padding */
+    }
+
+    
+    .site-title {
+        font-size: 1.2vw; 
+        margin-right: 12%;
+    }
+
+    .logo {
+        height: 20%; /* Standard logo height */
+    }
+}
+
+@media (max-width: 425px) {
+
+    #desc{
+        font-size: 3.5vw;
+        margin-top: 2%;
+    }
+
+    .site-title {
+        margin-right: 30%; /* Adjust margin as needed */
+        font-size: 3.5vw;
+    }
+
+    .logo {
+        width: 20%; /* Adjust logo size for mobile */
+        margin-left: 20%;
+    }
+
+    .logo-title{
+        padding: 2%;
+    }
+
+    
+    /* Show the hamburger menu on small screens */
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    /* Make Navbar a Sliding Menu from Left */
+    #navbar {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        width: 70%;
+        background-color: rgb(255, 255, 255); /* Slightly transparent background */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+        padding-top: 60px;
+        z-index: 1000;
+    }
+
+    /* Adjust Navbar Links */
+    #navbar-left a, #navbar-right a {
+        font-size: 4vw; /* Increase font size for readability */
+        padding: 15px;
+    }
+
+    /* Vertically Arranged Navbar Links */
+    #navbar-left, #navbar-right {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    /* Navbar Links with Border for Separation */
+    #navbar a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Display Navbar When Menu is Open */
+    .navbar-open #navbar {
+        display: flex; /* Show navbar when open */
+    }
+
+    .footer {
+        font-size: 2vw;
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        color: white;
+        padding: 5%;
+    }
+
+    .contact{
+        padding-left: 5%;
+    }
+}
+
