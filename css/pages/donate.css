@@ -33,7 +33,7 @@ textarea {
     justify-content: space-between; 
 }
 
-button, .join-button {
+button, .join-button, .donate-button {
     text-align: center;
     text-decoration: none;
     width: 48%; 
