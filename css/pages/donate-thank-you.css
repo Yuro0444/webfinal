@@ -2,7 +2,7 @@
     text-align: center;
     margin-top: 10%;
     margin-bottom: 5%;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 .thankyou{
@@ -15,14 +15,23 @@
 
 /* Viewport */
 
+/* Tablet */
+
+@media (max-width: 768px) {
+    .thank-you-container{
+        margin-top: 20%;
+        font-size: 3vw;
+    }
+}
+
 /* Mobile  */
 @media (max-width: 425px) {
     
     .thank-you-container{
         text-align: center;
-        margin-top: 30%;
+        margin-top: 25%;
         margin-bottom: 5%;
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .thankyou{
