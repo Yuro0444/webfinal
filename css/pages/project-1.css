@@ -1,4 +1,4 @@
-.picture{
+.picture {
     padding-top: 5%;
     padding-bottom: 5%;
     width: auto;
@@ -9,10 +9,9 @@
     background-color: #ffffff;
 }
 
-.energy{
+.energy {
     width: 95%;
     max-height: 90vh;
-
 }
 
 .about-container {
@@ -24,7 +23,7 @@
     color: rgb(255, 255, 255);
     justify-content: center;
     background-color: #005320;
-    background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0,73,28,0.8));
+    background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0, 73, 28, 0.8));
     padding: 3%;
     display: flex;
     flex-direction: column;
@@ -62,35 +61,32 @@
     background-color: #00491c;
     background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0, 73, 28, 0.8));
     display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: space-between; /* Space between text and button */
-    padding: 0 5%; /* Add some horizontal padding */
-    color: white; /* Set text color to white */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
     padding-right: 15%;
-   
 }
 
 .contact-banner h1 {
-    font-size: 2vw; /* Increase font size */
-    margin: 0; /* Remove default margin */
+    font-size: 2vw;
+    margin: 0;
     padding-left: 15%;
 }
 
 .contact-button {
-    background-color: #ffffff; /* Button background color */
-    color: rgb(0, 0, 0); /* Text color */
-    padding: 1vw 2vw; /* Button padding */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5%; /* Rounded corners */
-    font-size: 1vw; /* Font size */
-    transition: background-color 0.3s; /* Transition for hover effect */
-   
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 1vw 2vw;
+    text-decoration: none;
+    border-radius: 5%;
+    font-size: 1vw;
+    transition: background-color 0.3s;
 }
 
 .contact-button:hover {
-    background-color: #268a4c; /* Darker color on hover */
+    background-color: #268a4c;
 }
-
 
 .join-donate {
     height: auto;
@@ -98,7 +94,7 @@
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    position: relative; /* Ensure child elements can be positioned relative to this container */
+    position: relative;
 }
 
 .mountain {
@@ -110,27 +106,28 @@
 
 .join-donate-content {
     position: absolute;
-    top: 50%; /* Center the content vertically */
-    left: 50%; /* Center the content horizontally */
-    transform: translate(-50%, -50%); /* Translate to perfectly center */
-    color: #006125; /* Text color */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #006125;
     text-align: center;
 }
 
 .join-donate h1 {
     font-size: 3vw;
     font-weight: 700;
-    margin-bottom: 30px; /* Add some space between the text and the buttons */
+    margin-bottom: 30px;
     color: white;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 2vw; /* Space between the buttons */
+    gap: 2vw;
 }
 
-.join-button, .donate-button {
+.join-button, 
+.donate-button {
     background-color: #006125;
     color: white;
     border: none;
@@ -141,57 +138,47 @@
     transition: background-color 0.3s ease;
 }
 
-.join-button:hover, .donate-button:hover {
-    background-color: #3c7a3c;    
+.join-button:hover, 
+.donate-button:hover {
+    background-color: #3c7a3c;
 }
 
-.mountain{
+.mountain {
     width: 70%;
     height: auto;
     max-height: 50vh;
     border-radius: 20px;
 }
 
-
+/* Viewport */
 
 /* Tablet */
+
 @media (max-width: 768px) {
-    #top{
+    #top {
         margin-top: 15%;
     }
-
     .about-text-project h1 {
         font-size: 3vh;
         margin-bottom: 1%;
     }
-
     .about-text-project p {
         font-weight: 300;
         font-size: 2.5vw;
         margin-bottom: 2%;
     }
-    
-
 }
 
+/* Mobile */
 
-/* Laptop */
-@media (min-width: 769px) and (max-width: 1440px) {
-    
-}
-
-/* Phone margin to fit with the new navbar */
 @media (max-width: 425px) {
-
-    #top{
+    #top {
         margin-top: 15%;
     }
-
     .about-text-project h1 {
         font-size: 2.5vh;
         margin-bottom: 1%;
     }
-    
     .about-text-project p {
         font-weight: 300;
         font-size: 3.5vw;

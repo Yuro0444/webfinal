@@ -1,70 +1,65 @@
-
-.faq{
+.faq {
     padding: 7%;
     background-color: #ffffff;
     display: flex;
     width: auto;
     height: auto;
-    /* border: solid red 2px; */
 }
 
-.faq-leaves{
+.faq-leaves {
     display: block;
     border-radius: 7px;
     width: 45%;
     max-height: 85vh;
-    /* border: solid red 2px; */
 }
 
-.faq-text{
+.faq-text {
     margin-left: 5%;
     height: auto;
     width: 50%;
-    /* border: solid red 2px; */
 }
 
-.faq-text h1{
+.faq-text h1 {
     font-size: 2vw;
     font-weight: 700;
 }
 
-.faq-text h2{
+.faq-text h2 {
     font-size: 1.2vw;
     padding-top: 10%;
 }
 
-.faq-text h3{
+.faq-text h3 {
     color: #006125;
 }
 
-.faq-text hr{
+.faq-text hr {
     background-color: #00000023;
     opacity: 0.3;
 }
 
-.faq-text h2{
+.faq-text h2 {
     cursor: pointer;
     transition: color 0.3s ease;
     position: relative;
-    
 }
 
-.faq-text h2::after{
-    content: '⌄'; /* Downward arrow */
+.faq-text h2::after {
+    content: '⌄';
     position: absolute;
-    right: 0; /* Place the arrow to the right of the text */
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform 0.3s ease; /* Animation for rotation */
+    transition: transform 0.3s ease;
 }
 
 .faq-text h2.active {
-    color: #006125; /* Change to any color you prefer */
+    color: #006125;
 }
 
-.faq-text h2.active::after{
-    transform: translateY(-50%) rotate(180deg); /* Rotate arrow upwards */
-    content: '⌃'; /* Upward arrow */
+.faq-text h2.active::after {
+    transform: translateY(-50%) rotate(180deg);
+    content: '⌃';
 }
 
 .panel {
@@ -75,62 +70,57 @@
 }
 
 .panel.open {
-    max-height: 150px; /* Adjust this value depending on content size */
+    max-height: 150px;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
+/* Viewport */
 
-    .space{
+/* Tablet */
+
+@media (max-width: 768px) {
+    .space {
         margin-top: 10%;
     }
-
-    .faq-text h1{
+    .faq-text h1 {
         font-size: 3.2vw;
         font-weight: 700;
     }
-
-    .faq-text h2{
+    .faq-text h2 {
         font-size: 1.8vw;
         padding-top: 10%;
     }
-
     .panel {
         font-size: 1.7vw;
     }
 }
 
-
 /* Laptop */
+
 @media (min-width: 769px) and (max-width: 1440px) {
-    .faq-text h1{
+    .faq-text h1 {
         font-size: 3vw;
         font-weight: 700;
     }
-
-    .faq-text h2{
+    .faq-text h2 {
         font-size: 1.7vw;
         padding-top: 10%;
     }
-
     .panel {
         font-size: 1.5vw;
     }
 }
 
-/* Phone margin to fit with the new navbar */
-@media (max-width: 425px) {
+/* Mobile */
 
-    .faq-text h1{
+@media (max-width: 425px) {
+    .faq-text h1 {
         font-size: 4vw;
         font-weight: 700;
     }
-
-    .faq-text h2{
+    .faq-text h2 {
         font-size: 2.6vw;
         padding-top: 10%;
     }
-
     .panel {
         font-size: 2.5vw;
     }

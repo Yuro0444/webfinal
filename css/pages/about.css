@@ -60,44 +60,41 @@
     background-color: #00491c;
     background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0, 73, 28, 0.8));
     display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: space-between; /* Space between text and button */
-    padding: 0 5%; /* Add some horizontal padding */
-    color: white; /* Set text color to white */
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 5%; 
+    color: white; 
     padding-right: 15%;
-   
 }
 
 .contact-banner h1 {
-    font-size: 2vw; /* Increase font size */
-    margin: 0; /* Remove default margin */
+    font-size: 2vw; 
+    margin: 0; 
     padding-left: 15%;
 }
 
 .contact-button {
-    background-color: #ffffff; /* Button background color */
-    color: rgb(0, 0, 0); /* Text color */
-    padding: 1vw 2vw; /* Button padding */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5%; /* Rounded corners */
-    font-size: 1vw; /* Font size */
-    transition: background-color 0.3s; /* Transition for hover effect */
-   
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 1vw 2vw; 
+    text-decoration: none; 
+    border-radius: 5%; 
+    font-size: 1vw; 
+    transition: background-color 0.3s; 
 }
 
 .contact-button:hover {
-    background-color: #268a4c; /* Darker color on hover */
+    background-color: #268a4c; 
 }
 
-
-
-
+/* Viewport */
 
 /* Tablet */
 @media (max-width: 768px) {
-    .about-container{
+    .about-container {
         margin-top: 17%;
     }
+
     .about-text-about h1 {
         font-size: 4vh;
         margin-bottom: 1%;
@@ -110,12 +107,12 @@
     }
 }
 
-
 /* Laptop */
 @media (min-width: 769px) and (max-width: 1440px) {
-    .about-container{
+    .about-container {
         margin-top: 5%;
     }
+
     .about-text-about h1 {
         font-size: 5vh;
         margin-bottom: 1%;
@@ -128,12 +125,12 @@
     }
 }
 
-/* Phone margin to fit with the new navbar */
+/* Mobile */
 @media (max-width: 425px) {
-
-    .about-container{
+    .about-container {
         margin-top: 17%;
     }
+
     .about-text-about h1 {
         font-size: 2.5vh;
         margin-bottom: 1%;

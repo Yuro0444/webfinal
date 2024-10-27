@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earth Wise</title>
+    <!-- Linking external stylesheets for styling -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/header-footer.css">
     <link rel="stylesheet" href="../css/dark.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+    <!-- Adding a favicon -->
     <link rel="icon" href="../assets/photos/logo.png" type="image/png">
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
 </head>
 <body>
     <header>
         <div class="header-container">        
             <div class="logo-title" id="logo-container">
+                <!-- Hamburger menu button for mobile navigation -->
                 <button class="hamburger-menu" aria-label="Toggle menu">
-                    &#9776;
+                    &#9776; <!-- Hamburger icon -->
                 </button>
                 
+                <!-- Logo and site title -->
                 <img src="../assets/photos/logo.png" alt="Logo" class="logo">
                 <h1 class="site-title">EARTH<br>WISE</h1>
             </div>
     
             <nav id="navbar">
                 <div id="navbar-left">
+                    <!-- Navigation links -->
                     <a href="../html/index.html">Home</a>
                     <a href="../html/pages/about.html">About</a>
                     <a href="../html/pages/projects.html">Projects</a>
@@ -33,6 +35,7 @@
                     <a href="../html/pages/contact-us.html">Contact Us</a>
                 </div>
                 <div id="navbar-right">
+                    <!-- Dark mode toggle and other links -->
                     <a href="#" id="dark-mode-toggle">Dark Mode</a>
                     <a href="../html/pages/donate.html" id="donate">Donate</a>
                     <a href="../html/pages/join.html" id="join">Join</a>
@@ -42,40 +45,45 @@
     </header>
 
     <script>
+        // Event listener for hamburger menu toggle
         document.querySelector('.hamburger-menu').addEventListener('click', function() {
             document.querySelector('.header-container').classList.toggle('navbar-open');
         });
     </script>
 
     <script>
+        // Functions to enable or disable dark mode
         function enableDarkMode() {
             document.body.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark');
-            document.getElementById('dark-mode-toggle').innerText = 'Light Mode'; // Change text to Light Mode
+            document.getElementById('dark-mode-toggle').innerText = 'Light Mode';
         }
     
         function disableDarkMode() {
             document.body.classList.remove('dark-mode');
             localStorage.setItem('theme', 'light');
-            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; // Change text to Dark Mode
+            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; 
         }
     
+        // Function to detect the user's color scheme preference
         function detectColorScheme() {
             let theme = 'light';
     
             if (localStorage.getItem('theme')) {
-                theme = localStorage.getItem('theme');
+                theme = localStorage.getItem('theme'); // Get saved theme from localStorage
             } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                theme = 'dark';
+                theme = 'dark'; // Use system preference if no theme is saved
             }
     
-            theme === 'dark' ? enableDarkMode() : disableDarkMode();
+            theme === 'dark' ? enableDarkMode() : disableDarkMode(); // Apply the detected theme
         }
     
-        detectColorScheme();
+        detectColorScheme(); // Detect and apply theme on page load
     
+        // Event listener for dark mode toggle button
         document.getElementById('dark-mode-toggle').addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the default anchor behavior
+            event.preventDefault();
+            // Toggle dark mode based on current theme
             if (localStorage.getItem('theme') === 'light') {
                 enableDarkMode();
             } else {
@@ -83,140 +91,144 @@
             }
         });
     </script>
-    
-
 
     <div class="space"></div>
- 
 
     <div class="html-container">
-    <div class="about-container">
-        <div class="about-text">
-            <h3 id ="desc">ABOUT US</h3>
-            <h1>Established in 2014, Earth Wise is
-                committed in saving Mother Earth</h1>
-            <p><br>We dedicate our efforts to environmental conservation, promoting 
-                sustainability, and protecting the natural world for future generations</p>
-            <a href="../html/pages/about.html"><button class="learn-more-button">Learn More</button></a>
+        <div class="about-container">
+            <div class="about-text">
+                <h3 id ="desc">ABOUT US</h3>
+                <h1>Established in 2014, Earth Wise is committed to saving Mother Earth</h1>
+                <p><br>We dedicate our efforts to environmental conservation, promoting sustainability, and protecting the natural world for future generations.</p>
+                <!-- Button to learn more about the organization -->
+                <a href="../html/pages/about.html"><button class="learn-more-button">Learn More</button></a>
+            </div>
+            <!-- About image -->
+            <img src ="../assets/photos/aboutus.jpg" class ="about">
         </div>
-        <img src ="../assets/photos/aboutus.jpg" class ="about">
-    </div>
 
-    <div class ="counters">
-        <div>
-            <div class ="counter">
-                <h1><span data-count="156">0</span></h1>
-                <h3>Projects Completed</h3>
-            </div>
-            <div class ="counter">
-                <h1><span data-count="32">0</span></h1>
-                <h3>Wildlife Species Saved</h3>
-            </div>
-            <div class ="counter">
-                <h1><span data-count="91">0</span></h1>
-                <h3>Countries</h3>
-            </div>
-            <div class ="counter">
-                <h1><span data-count="284">0</span></h1>
-                <h3>Millions Raised</h3>
+        <div class ="counters">
+            <div>
+                <!-- Counter elements for displaying statistics -->
+                <div class ="counter">
+                    <h1><span data-count="156">0</span></h1>
+                    <h3>Projects Completed</h3>
+                </div>
+                <div class ="counter">
+                    <h1><span data-count="32">0</span></h1>
+                    <h3>Wildlife Species Saved</h3>
+                </div>
+                <div class ="counter">
+                    <h1><span data-count="91">0</span></h1>
+                    <h3>Countries</h3>
+                </div>
+                <div class ="counter">
+                    <h1><span data-count="284">0</span></h1>
+                    <h3>Millions Raised</h3>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const counters = document.querySelectorAll(".counters span");
+        <script>
+            // Counter animation on page load
+            document.addEventListener("DOMContentLoaded", () => {
+                const counters = document.querySelectorAll(".counters span");
     
-            counters.forEach(counter => {
-                counter.innerText = 0;
-                let count = 0;
+                counters.forEach(counter => {
+                    counter.innerText = 0; // Initialize counter to 0
+                    let count = 0;
     
-                function updateCount() {
-                    const target = parseInt(counter.dataset.count);
+                    function updateCount() {
+                        const target = parseInt(counter.dataset.count); // Get target count from data attribute
     
-                    if (count < target) {
-                        count++;
-                        counter.innerText = count;
-                        setTimeout(updateCount, 25); // Adjust delay for animation speed
-                    } else {
-                        counter.innerText = target; // Ensure it hits the target number
+                        if (count < target) {
+                            count++;
+                            counter.innerText = count; // Update counter display
+                            setTimeout(updateCount, 25); // Update every 25 milliseconds
+                        } else {
+                            counter.innerText = target; // Ensure final count matches target
+                        }
                     }
-                }
-                updateCount();
+                    updateCount(); // Start counting
+                });
             });
-        });
-    </script>
+        </script>
 
-    <div class="projects-container">
-        <img src ="../assets/photos/cleaning.jpg" class ="cleaning">
-        <div class="projects-text">
-            <h3 id ="desc">PROJECTS</h3>
-            <h1>Our Projects: <br>
-                Dedicated to Protecting Our Planet</h1>
-            <p>We have committed our projects to <br> advancing environmental conservation,<br> and promoting sustainable practices</p>
-            <a href="../html/pages/projects.html"><button class="learn-more-button">Learn More</button></a>
+        <div class="projects-container">
+            <img src ="../assets/photos/cleaning.jpg" class ="cleaning">
+            <div class="projects-text">
+                <h3 id ="desc">PROJECTS</h3>
+                <h1>Our Projects: <br> Dedicated to Protecting Our Planet</h1>
+                <p>We have committed our projects to advancing environmental conservation, and promoting sustainable practices.</p>
+                <!-- Button to learn more about projects -->
+                <a href="../html/pages/projects.html"><button class="learn-more-button">Learn More</button></a>
+            </div>
+        </div>  
+
+        <div class="contact-banner">
+            <h1>Have any questions or concerns?<br> Get your queries answered by our team</h1>
+            <!-- Button to contact the team -->
+            <a href="../html/pages/contact-us.html" class="contact-button">Get in Touch</a>
         </div>
-    </div>  
 
-    <div class="contact-banner">
-        <h1>Have any questions or concerns?<br> Get your queries answered by our team</h1>
-        <a href="../html/pages/contact-us.html" class="contact-button">Get in Touch</a>
-    </div>
+        <div class="join-donate">
+            <img src="../assets/photos/mountain.jpg" class="mountain" alt="Mountain">
+            <div class="join-donate-content">
+                <h1>Be the change you wish<br>to see in the world</h1>
+                <div class="buttons">
+                    <!-- Buttons to join as a volunteer or donate -->
+                    <a href="../html/pages/join.html"><button class="join-button">Join as Volunteer</button></a>
+                    <a href="../html/pages/donate.html"><button class="donate-button">Donate</button></a>
+                </div>
+            </div>
+        </div>
 
-    <div class="join-donate">
-        <img src="../assets/photos/mountain.jpg" class="mountain" alt="Mountain">
-        <div class="join-donate-content">
-            <h1>Be the change you wish<br>to see in the world</h1>
-            <div class="buttons">
-                <a href="../html/pages/join.html"><button class="join-button">Join as Volunteer</button></a>
-                <a href="../html/pages/donate.html"><button class="donate-button">Donate</button></a>
+        <div class="faq">
+            <img src="../assets/photos/leaves.png" class="faq-leaves">
+            <div class="faq-text">
+                <h3 id ="desc">ASKED QUESTIONS</h3>
+                <h1>Frequently Asked<br> Questions</h1>
+                <!-- Button to view full FAQ -->
+                <a href="../html/pages/faq.html"><button class="learn-more-button">View Full FAQ</button></a>
+                
+                <div class="accordion">
+                    <!-- Accordion items for FAQs -->
+                    <h2>What is the purpose of this website?</h2>
+                    <p class="panel">The purpose of this website is to raise awareness about environmental issues, provide educational resources, and encourage community involvement in sustainable projects.</p>
+                    <hr>
+                    
+                    <h2>How can I get involved with your projects?</h2>
+                    <p class="panel">You can join our projects by visiting the "Join Us" page and signing up to volunteer or participate in any ongoing or upcoming initiatives.</p>
+                    <hr>
+                    
+                    <h2>How can I make a donation?</h2>
+                    <p class="panel">Donations can be made through our "Donate" page, where you can choose to support a specific project or contribute to general funds.</p>
+                    <hr>
+                    
+                    <h2>How can I stay updated on your latest news and events?</h2>
+                    <p class="panel">You can stay updated by subscribing to our newsletter or following us on our social media platforms.</p>
+                    <hr>
+                    
+                    <h2>What types of projects do you do?</h2>
+                    <p class="panel">We focus on a variety of environmental projects, including ecosystem restoration, sustainability initiatives, and conservation efforts.</p>
+                    <hr>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="faq">
-        <img src="../assets/photos/leaves.png" class="faq-leaves">
-        <div class="faq-text">
-            <h3 id ="desc">ASKED QUESTIONS</h3>
-            <h1>Frequently Asked<br> Questions</h1>
-            <a href="../html/pages/faq.html"><button class="learn-more-button">View Full FAQ</button></a>
-            
-            <div class="accordion">
-                <h2>What is the purpose of this website?</h2>
-                <p class="panel">The purpose of this website is to raise awareness about environmental issues, provide educational resources, and encourage community involvement in sustainable projects.</p>
-                <hr>
-                
-                <h2>How can I get involved with your projects?</h2>
-                <p class="panel">You can join our projects by visiting the "Join Us" page and signing up to volunteer or participate in any ongoing or upcoming initiatives.</p>
-                <hr>
-                
-                <h2>How can I make a donation?</h2>
-                <p class="panel">Donations can be made through our "Donate" page, where you can choose to support a specific project or contribute to general funds.</p>
-                <hr>
-                
-                <h2>How can I stay updated on your latest news and events?</h2>
-                <p class="panel">You can stay updated by subscribing to our newsletter or following us on our social media platforms.</p>
-                <hr>
-                
-                <h2>What types of projects do you do?</h2>
-                <p class="panel">We focus on a variety of environmental projects, including ecosystem restoration, sustainability initiatives, and conservation efforts.</p>
-                <hr>
-            </div>
-        </div>
-    </div>
-</div>
+    
     <script>
+        // Accordion functionality for FAQs
         document.querySelectorAll('.accordion h2').forEach(question => {
             question.addEventListener('click', () => {
-                // Toggle the active state for the question
-                question.classList.toggle('active');
+                question.classList.toggle('active'); // Toggle active class for styling
                 
-                // Toggle the panel visibility
-                const panel = question.nextElementSibling;
+                const panel = question.nextElementSibling; // Get the associated panel
+                // Toggle panel visibility
                 if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
+                    panel.style.maxHeight = null; // Close panel
                 } else {
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    panel.style.maxHeight = panel.scrollHeight + 'px'; // Open panel
                 }
             });
         });
@@ -225,7 +237,7 @@
     <div class="footer">
         <div>
             <p><br>“We dedicate our efforts to environmental<br> conservation, promoting sustainability, and<br> protecting the natural world for future<br> generations."</p>
-            <p><br>Copyright © 2024. Euan Roie Nicolas </p>
+            <p><br>Copyright © 2024. Euan Roie Nicolas</p>
         </div>
         <div class="contact">
             <p>Phone</p>
@@ -236,6 +248,5 @@
             <p>EarthWise@Gmail.com</p>
         </div>
     </div>
-    </body>
+</body>
 </html>
-

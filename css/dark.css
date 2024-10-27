@@ -1,104 +1,100 @@
 body.dark-mode .targetElement {
-    background: #000000;
+  background: #000000;
 }
 
 body.dark-mode .header-container,
 body.dark-mode .projects-container, 
-body.dark-mode .faq, body.dark-mode .video {
-    background-color: var(--dark); /* Change to dark mode color */
+body.dark-mode .faq, 
+body.dark-mode .video {
+  background-color: var(--dark);
 }
 
 body.dark-mode .about-container,
 body.dark-mode .join-donate,
-body.dark-mode .featured-projects{
-    background-color: var(--medium); /* Change to dark mode color */
+body.dark-mode .featured-projects {
+  background-color: var(--medium);
 }
 
-body.dark-mode .counters{
-    background-color: var(--accent);
+body.dark-mode .counters {
+  background-color: var(--accent);
 }
 
-body.dark-mode .logo-title, body.dark-mode .learn-more-button{
-    background-color: var(--darkGreen);
+body.dark-mode .logo-title, 
+body.dark-mode .learn-more-button {
+  background-color: var(--darkGreen);
 }
-
 
 @media only screen and (min-width: 0rem) {
-    :root {
+  :root {
       --dark: #040404;
       --medium: #121212;
       --accent: #0B0B0B;
       --darkGreen: #003b19;
       --bodyTextColorWhite: #fafbfc;
-    }
-    body.dark-mode {
-      background-color: var(--dark);
-    }
-    body.dark-mode p,
-    body.dark-mode li,
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6,
-    body.dark-mode .cs-title,
-    body.dark-mode .cs-text,
-    body.dark-mode .cs-li, body.dark-mode #navbar a{
-      color: var(--bodyTextColorWhite);
-    }
-    body.dark-mode .light {
-      display: none;
-    }
-    body.dark-mode .dark {
-      display: block !important;
-    }
-    .dark {
-      display: none;
-    }
   }
-  
-/* Dark mode background for navbar */
-body.dark-mode #navbar {
-  background-color: var(--dark); /* Dark mode color */
-  box-shadow: 4px 0 8px rgba(255, 255, 255, 0.1); /* Light shadow for contrast */
+  body.dark-mode {
+      background-color: var(--dark);
+  }
+  body.dark-mode p,
+  body.dark-mode li,
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6,
+  body.dark-mode .cs-title,
+  body.dark-mode .cs-text,
+  body.dark-mode .cs-li, 
+  body.dark-mode #navbar a {
+      color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode .light {
+      display: none;
+  }
+  body.dark-mode .dark {
+      display: block !important;
+  }
+  .dark {
+      display: none;
+  }
 }
 
-/* Dark mode color for navbar links */
+body.dark-mode #navbar {
+  background-color: var(--dark);
+  box-shadow: 4px 0 8px rgba(255, 255, 255, 0.1);
+}
+
 body.dark-mode #navbar-left a, 
 body.dark-mode #navbar-right a {
-  color: var(--bodyTextColorWhite); /* Change link color to white for dark mode */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Adjust border color */
+  color: var(--bodyTextColorWhite);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Adjust navbar toggle visibility in dark mode */
 body.dark-mode .light {
-  display: none; /* Hide light mode-specific elements */
+  display: none;
 }
 body.dark-mode .dark {
-  display: block !important; /* Show dark mode-specific elements */
+  display: block !important;
 }
 
-/* Modify the sliding menu styling in dark mode */
 body.dark-mode .hamburger-menu {
-  color: #ffffff; /* Light color for the hamburger menu icon */
+  color: #ffffff;
 }
 
-/* Additional Elements */
 body.dark-mode .logo-title, 
 body.dark-mode .learn-more-button {
-  background-color: var(--darkGreen); /* Dark green for button backgrounds */
-  color: var(--bodyTextColorWhite); /* Light text color */
+  background-color: var(--darkGreen);
+  color: var(--bodyTextColorWhite);
 }
 
+/* Viewport */
 
+/* Mobile */
 
-/* Additional media query adjustments if needed */
 @media (max-width: 425px) {
-  /* Further mobile-specific styling for dark mode */
   body.dark-mode #navbar-left a, 
   body.dark-mode #navbar-right a {
-      color: var(--bodyTextColorWhite); /* Reconfirm light text in dark mode */
+      color: var(--bodyTextColorWhite);
   }
 }
-

@@ -48,13 +48,13 @@
         function enableDarkMode() {
             document.body.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark');
-            document.getElementById('dark-mode-toggle').innerText = 'Light Mode'; // Change text to Light Mode
+            document.getElementById('dark-mode-toggle').innerText = 'Light Mode'; 
         }
     
         function disableDarkMode() {
             document.body.classList.remove('dark-mode');
             localStorage.setItem('theme', 'light');
-            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; // Change text to Dark Mode
+            document.getElementById('dark-mode-toggle').innerText = 'Dark Mode'; 
         }
     
         function detectColorScheme() {
@@ -72,7 +72,7 @@
         detectColorScheme();
     
         document.getElementById('dark-mode-toggle').addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the default anchor behavior
+            event.preventDefault(); 
             if (localStorage.getItem('theme') === 'light') {
                 enableDarkMode();
             } else {
@@ -99,7 +99,7 @@
 
     <div class="donation-form-container">
 
-        <form id="donation-form" action="donate-thank-you.html" method="POST">
+        <form id="donation-form" action="../pages/donate-thank-you.html" method="POST">
             <label for="amount">Donation Amount:</label>
             <input type="number" id="amount" name="amount" required placeholder="Enter amount (e.g., 50)">
 
