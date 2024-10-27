@@ -51,6 +51,7 @@
     cursor: pointer;
     margin-top: 1.5vw;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .learn-more-button:hover {
@@ -410,32 +411,171 @@
 }
 
 /* Mobile */
-
 @media (max-width: 425px) {
-    #desc {
+
+    #desc{
         font-size: 2.5vw;
         text-align: center;
+
+    }
+
+    .about-container{
+        padding: 10%;
+    }
+
+    .about-text h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .about-text p{
+        font-size: 4vw;
+        font-weight: lighter;
+        text-align: center;
+    }
+    
+    .learn-more-button {
+        font-size: 4vw; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+        text-decoration: none;
+    }
+
+    .about{
+        width: 100%;
+        display: none;
+    }
+
+    .cleaning{
+        width: 100%;
+        display: none;
+    }
+    
+    .projects-text h1{
+        font-size: 4.8vw;
+        text-align: center;
+    }
+
+    .projects-text p{
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .projects-container{
+        padding: 10%;
+    }
+
+    .mountain{
+        height: 15vh;
     }
 
     .about-container, .projects-container {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 
-    .about-text, .projects-text {
-        margin-left: 0;
-        margin-right: 0;
+    .faq {
+        flex-direction: column; 
+        padding: 5%; 
     }
 
-    .about {
-        width: 90%;
+    
+    .faq-text {
+        width: 100%; 
+        margin: 0; 
+        
     }
 
-    .projects-container {
-        width: 90%;
+    
+    .faq-text h2 {
+        font-size: 3.5vw;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .faq-text h2 {
+        padding-top: 5%;
+    }
+
+    .faq-text h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .faq-leaves{
+        display: none;
+    }
+
+    .panel {
+        text-align: center;
+        font-size: 3vw;
+    }
+
+
+    .counter h1 {
+        font-size: 5vw; 
+        margin-bottom: 0.5em;
     }
     
-    .cleaning {
-        width: 90%;
+    .counter h3 {
+        font-size: 3vw; 
+    }
+    
+
+    .counters {
+        width: auto;
+        height: auto;
+        background-color: #00491c;
+        background-image: radial-gradient(circle, rgba(36, 117, 36, 0.8), rgba(0,73,28,0.8));
+        padding: 1.5em 3em;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .counters > div {
+        width: 100%; 
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 2em 1.5em; 
+    }  
+
+    .counter:not(:last-child)::before {
+        display: none;
+    }
+    
+    .contact-banner {
+        max-height:  15vh;
+    }
+    
+    .contact-banner h1 {
+        font-size: 3.5vw; 
+    }
+
+    .contact-button {
+        font-size: 2.5vw; 
+        text-align: center;
+    }
+
+    .join-donate {
+        width: auto;
+        height: auto;
+        background-color: #F8F8F8;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: relative; 
+    } 
+    
+    .join-donate h1 {
+        font-size: 4vw;
+        font-weight: 700;
+        margin-bottom: 30px; 
+        color: white;
+    }
+    
+    .join-button, .donate-button {
+        font-size: 3vw;
+        text-decoration: none;
     }
 }
